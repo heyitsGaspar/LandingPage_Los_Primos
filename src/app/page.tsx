@@ -2,6 +2,7 @@
 import Image from 'next/image'
 import { TextGenerateEffect } from '@/components/ui/text-generate-effect'
 import { motion} from 'motion/react'
+
 const text = 'Bienvenidos a Los Primos'
 const text2 = 'Hamburguesas, hot dogs, esquites, y más...'
 const text3 = 'Explora nuestros productos '
@@ -36,10 +37,10 @@ export default function Home () {
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
       >
-        <div className='absolute text-center'>
+        <div className='relative  '>
           <TextGenerateEffect
             words={text3}
-            className='text-5xl font-poppins text-white '
+            className='text-4xl text-center pt-10 font-poppins text-white '
           />
         </div>
       </motion.div>
