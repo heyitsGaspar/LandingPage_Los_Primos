@@ -2,6 +2,7 @@
 import Image from 'next/image'
 import { TextGenerateEffect } from '@/components/ui/text-generate-effect'
 import { motion} from 'motion/react'
+import { InfiniteMovingCardsFoods } from '@/components/landing/infiniteCards'
 
 const text = 'Bienvenidos a Los Primos'
 const text2 = 'Hamburguesas, hot dogs, esquites, y más...'
@@ -31,7 +32,7 @@ export default function Home () {
         </div>
       </div>
       <motion.div
-        className='relative w-full h-[80vh]'
+        className='relative w-full h-[vh]'
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
@@ -43,6 +44,7 @@ export default function Home () {
             className='text-4xl text-center pt-10 font-poppins text-white '
           />
         </div>
+        <InfiniteMovingCardsFoods />
       </motion.div>
     </div>
   )
