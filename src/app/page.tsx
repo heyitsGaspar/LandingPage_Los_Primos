@@ -33,7 +33,7 @@ export default function Home () {
         </div>
       </div>
       <motion.div
-        className='relative w-full  h-[50vh] '
+        className='relative w-full  h-[45vh] '
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
@@ -70,6 +70,7 @@ export default function Home () {
           <InfiniteMovingCardsFoods />
         </div>
       </motion.div>
+      
     </div>
   )
 }

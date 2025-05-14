@@ -17,18 +17,34 @@ export function InfiniteMovingCardsFoods() {
 const testimonials = [
   {
     title: "Hamburguesas",
-    src: "/assets/img2.webp",
+    src: "/assets/img13.webp",
   },
   {
-    title: "Hamburguesas",
-    src: "/assets/img2.webp",
+    title: "Hot-Dog de Alambre",
+    src: "/assets/img3.webp",
   },
   {
-    title: "Hamburguesas",
-    src: "/assets/img2.webp",
+    title: "Hot-Dog de Chorizo",
+    src: "/assets/img4.webp",
   },
   {
-    title: "Hamburguesas",
-    src: "/assets/img2.webp",
+    title: "TostiElote Picante",
+    src: "/assets/img5.webp",
   },
+  {
+    title: "Hot-Dog de Champiñon",
+    src: "/assets/img8.webp",
+  },
+  {
+    title: "Combo Hot-Dog",
+    src: "/assets/img10.webp",
+  },
+  {
+    title: "Boneless",
+    src: "/assets/img11.webp",
+  },
+  {
+    title: "Combo Hamburguesa",
+    src: "/assets/img12.webp",
+  }
 ];
