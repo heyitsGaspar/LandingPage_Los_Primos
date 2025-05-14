@@ -4,9 +4,11 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --color-tittle: #FFB627
+  --animate-spotlight: spotlight 2s ease 0.75s 1 forwards;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-tittle: var(--title);
+  --color-buttom-: var(--color-buttom);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --color-sidebar-ring: var(--sidebar-ring);
@@ -55,6 +57,8 @@
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.141 0.005 285.823);
+  --title: oklch(0.87 0.1224 78.22);
+  --color-buttom: oklch(0.69 0.2073 42.23);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.141 0.005 285.823);
   --popover: oklch(1 0 0);
@@ -129,3 +133,13 @@
   }
 }
 
+@keyframes spotlight {
+  0% {
+    opacity: 0;
+    transform: translate(-72%, -62%) scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -40%) scale(1);
+  }
+}

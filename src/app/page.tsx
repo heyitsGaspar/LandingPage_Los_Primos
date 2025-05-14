@@ -5,13 +5,14 @@ import { motion } from 'motion/react'
 import { InfiniteMovingCardsFoods } from '@/components/landing/infiniteCards'
 import { LampContainer } from '@/components/ui/lamp'
 import { CardStackFoods } from '@/components/landing/cardStack'
+import {AboutUs} from '@/components/landing/aboutUs'
 
 const text = 'Bienvenidos a Los Primos'
 const text2 = 'Hamburguesas, hot dogs, esquites, y más...'
 const text3 = 'Explora nuestro Menú'
 const text4 = 'Desde hamburguesas jugosas, esquites con el toque perfecto y postres irresistibles. En Los Primos tenemos antojos para todos los gustos.¡Descubre lo que tenemos para ti y déjate sorprender!'
-const text5 = 'Acerca de nosotros'
-const text6 = 'En Los Primos, somos un equipo apasionado por la comida deliciosa y la diversión. Nos especializamos en ofrecerte una experiencia gastronómica única con nuestras hamburguesas jugosas, hot dogs irresistibles y esquites con el toque perfecto. Nuestro compromiso es brindarte calidad, sabor y un ambiente acogedor para que disfrutes de cada bocado. ¡Ven y descubre por qué somos los primos de la buena comida!'
+// const text5 = 'Acerca de nosotros'
+// const text6 = 'En Los Primos, somos un equipo apasionado por la comida deliciosa y la diversión. Nos especializamos en ofrecerte una experiencia gastronómica única con nuestras hamburguesas jugosas, hot dogs irresistibles y esquites con el toque perfecto. Nuestro compromiso es brindarte calidad, sabor y un ambiente acogedor para que disfrutes de cada bocado. ¡Ven y descubre por qué somos los primos de la buena comida!'
 
 export default function Home () {
   return (
@@ -22,7 +23,7 @@ export default function Home () {
           alt='TheCousins'
           layout='fill'
           objectFit='cover'
-          className='opacity-70 blur-xs '
+          className='opacity-50 blur-xs '
         />
 
         <div className='absolute text-center'>
@@ -32,7 +33,7 @@ export default function Home () {
           />
           <TextGenerateEffect
             words={text2}
-            className='text-2xl font-poppins text-orange-400'
+            className='text-2xl font-poppins text-tittle'
           />
         </div>
       </div>
@@ -53,7 +54,7 @@ export default function Home () {
                 duration: 0.8,
                 ease: 'easeInOut'
               }}
-              className='mt-8 flex items-center justify-center  bg-gradient-to-br from-slate-300 to-slate-500 py-4 bg-clip-text text-center text-2xl font-medium font-poppins  tracking-tight text-transparent md:text-5xl'
+              className='mt-8 flex items-center justify-center  bg-gradient-to-br from-slate-300 to-slate-700 py-4 bg-clip-text text-center text-2xl font-medium font-poppins  tracking-tight text-transparent md:text-5xl'
             >
               Explora <br />
               nuestros productos
@@ -88,10 +89,10 @@ export default function Home () {
         />
 
         <div className='relative flex flex-col md:flex-row gap-8 w-full max-w-6xl'>
-          <div className='md:w-1/2 text-white flex flex-col items-center justify-center'>
+          <div className='md:w-1/2 text-tittle flex flex-col items-center justify-center'>
             <TextGenerateEffect
               words={text3}
-              className='text-4xl font-poppins text-white '
+              className='text-4xl font-poppins text-tittle '
             />
             <TextGenerateEffect
               words={text4}
@@ -116,15 +117,8 @@ export default function Home () {
         transition={{ duration: 0.10 }}
         viewport={{ once: true }}
       >
-        <div className=' absolute text-center' >
-            <TextGenerateEffect
-            words={text5}
-            className='text-7xl font-poppins pt-10 flex justify-center items-center text-center text-white '
-          />
-          <TextGenerateEffect
-            words={text6}
-            className='text-2xl font-poppins text-center p-10 text-white'
-          />
+        <div  >
+          <AboutUs/>
         </div>
       </motion.div>
     </div>

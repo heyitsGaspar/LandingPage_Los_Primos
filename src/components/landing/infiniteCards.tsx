@@ -9,6 +9,7 @@ export function InfiniteMovingCardsFoods() {
         items={testimonials}
         direction="right"
         speed="fast"
+        
       />
     </div>
   );

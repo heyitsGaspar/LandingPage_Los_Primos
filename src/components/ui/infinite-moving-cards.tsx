@@ -94,7 +94,7 @@ export const InfiniteMovingCards = ({
             }}
           >
             <div className='absolute inset-0  flex items-end justify-center pb-5 '>
-              <h3 className='text-white text-xl font-semibold'>
+              <h3 className='text-white text-xl font-semibold text-center'>
                 {item.title}
               </h3>
             </div>
