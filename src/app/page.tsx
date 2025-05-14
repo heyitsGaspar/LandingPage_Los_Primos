@@ -4,12 +4,14 @@ import { TextGenerateEffect } from '@/components/ui/text-generate-effect'
 import { motion } from 'motion/react'
 import { InfiniteMovingCardsFoods } from '@/components/landing/infiniteCards'
 import { LampContainer } from '@/components/ui/lamp'
+import { CardStackFoods } from '@/components/landing/cardStack'
 
 const text = 'Bienvenidos a Los Primos'
 const text2 = 'Hamburguesas, hot dogs, esquites, y más...'
 const text3 = 'Explora nuestro Menú'
 const text4 = 'Desde hamburguesas jugosas, esquites con el toque perfecto y postres irresistibles. En Los Primos tenemos antojos para todos los gustos.¡Descubre lo que tenemos para ti y déjate sorprender!'
-// const text3 = 'Explora nuestros productos '
+const text5 = 'Acerca de nosotros'
+const text6 = 'En Los Primos, somos un equipo apasionado por la comida deliciosa y la diversión. Nos especializamos en ofrecerte una experiencia gastronómica única con nuestras hamburguesas jugosas, hot dogs irresistibles y esquites con el toque perfecto. Nuestro compromiso es brindarte calidad, sabor y un ambiente acogedor para que disfrutes de cada bocado. ¡Ven y descubre por qué somos los primos de la buena comida!'
 
 export default function Home () {
   return (
@@ -30,7 +32,7 @@ export default function Home () {
           />
           <TextGenerateEffect
             words={text2}
-            className='text-2xl font-poppins text-white'
+            className='text-2xl font-poppins text-orange-400'
           />
         </div>
       </div>
@@ -85,7 +87,7 @@ export default function Home () {
           className='opacity-70 blur-xs '
         />
 
-        <div className='relative z-10 flex flex-col md:flex-row gap-8 w-full max-w-6xl'>
+        <div className='relative flex flex-col md:flex-row gap-8 w-full max-w-6xl'>
           <div className='md:w-1/2 text-white flex flex-col items-center justify-center'>
             <TextGenerateEffect
               words={text3}
@@ -95,11 +97,34 @@ export default function Home () {
               words={text4}
               className='text-2xl pt-4 text-center font-poppins text-white'
             />
+
+            <button className='bg-white text-black font-poppins font-bold flex items-end px-4 py-2 rounded-md mt-4 hover:bg-gray-200 transition duration-300'>
+              Ver Menú
+
+            </button>
           </div>
-          <div className='bg-white/20 backdrop-blur-md  flex items-center justify-center rounded-lg p-4 text-white'>
-               <h3 className="text-lg font-semibold">Card 2</h3>
-        <p>Otro contenido</p>
+          <div className=' flex pl-20 pt-9 items-center justify-center  '>
+              
+            <CardStackFoods />
           </div>
+        </div>
+      </motion.div>
+      <motion.div
+        className=' w-full h-[100vh] '
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.10 }}
+        viewport={{ once: true }}
+      >
+        <div className=' absolute text-center' >
+            <TextGenerateEffect
+            words={text5}
+            className='text-7xl font-poppins pt-10 flex justify-center items-center text-center text-white '
+          />
+          <TextGenerateEffect
+            words={text6}
+            className='text-2xl font-poppins text-center p-10 text-white'
+          />
         </div>
       </motion.div>
     </div>
