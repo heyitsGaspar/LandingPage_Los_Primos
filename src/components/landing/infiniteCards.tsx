@@ -4,7 +4,7 @@ import { InfiniteMovingCards } from "../ui/infinite-moving-cards";
 
 export function InfiniteMovingCardsFoods() {
   return (
-    <div className="h-100vh] rounded-md flex flex-col antialiased items-center justify-center relative overflow-hidden">
+    <div className="  rounded-md flex flex-col antialiased items-center justify-center relative overflow-hidden">
       <InfiniteMovingCards
         items={testimonials}
         direction="right"
