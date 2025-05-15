@@ -5,6 +5,7 @@ import { motion } from 'motion/react'
 import { InfiniteMovingCardsFoods } from '@/components/landing/infiniteCards'
 import { CardStackFoods } from '@/components/landing/cardStack'
 import { AboutUs } from '@/components/landing/aboutUs'
+import { ColourfulTextDemo } from '@/components/landing/colourfulTittle'
 
 const text = 'Bienvenidos a Los Primos'
 const text2 = 'Hamburguesas, hot dogs, esquites, y más...'
@@ -39,15 +40,31 @@ export default function Home () {
         </div>
       </div>
       
-       <motion.div
-        className='relative w-full min-h-[40vh] p-5'
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
-      >
-        <InfiniteMovingCardsFoods />
-      </motion.div>
+      {/* Sección de Titulo */}
+
+      {/* Sección de Título */}
+<motion.div
+  className='relative w-full min-h-[30vh] sm:min-h-[50vh] xs:min-h-[30vh]'
+  initial={{ opacity: 0, y: 50 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8 }}
+  viewport={{ once: true }}
+>
+  <ColourfulTextDemo />
+</motion.div>
+
+{/* Sección de Tarjetas Infinitas */}
+<motion.div
+  className='relative w-full min-h-[20vh] p-5 flex items-center justify-center'
+  initial={{ opacity: 0, y: 50 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8, delay: 0.2 }}
+  viewport={{ once: true }}
+>
+  <InfiniteMovingCardsFoods />
+</motion.div>
+
+      
       {/* Sección de menú y tarjetas */}
       <motion.div
         initial={{ opacity: 0, y: 50 }}
