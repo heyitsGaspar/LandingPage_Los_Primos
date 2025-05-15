@@ -4,7 +4,7 @@ import { Spotlight } from "../ui/spotlight";
 
 export function AboutUs() {
   return (
-    <div className="relative flex h-[100vh] w-full overflow-hidden rounded-md bg-black/[0.96] antialiased md:items-center md:justify-center">
+    <div className="relative flex h-[100vh] w-full overflow-hidden  bg-black/[0.96] antialiased md:items-center md:justify-center">
       <div
         className={cn(
           "pointer-events-none absolute inset-0 [background-size:40px_40px] select-none",
@@ -17,10 +17,10 @@ export function AboutUs() {
         fill="white"
       />
       <div className="relative z-10 mx-auto w-full max-w-7xl p-4 pt-20 md:pt-0">
-        <h1 className="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-center text-4xl font-bold text-transparent md:text-7xl">
+        <h1 className="bg-opacity-50 bg-gradient-to-b text-tittle bg-clip-text text-center text-4xl font-bold  md:text-8xl">
           Sobre nosotros
         </h1>
-        <p className="mx-auto mt-4 max-w-lg text-center text-base font-normal text-neutral-300">
+        <p className="mx-auto mt-4 font-poppins font-medium text-xl max-w-lg text-center text-neutral-300">
           En Los Primos, somos un equipo apasionado por la comida deliciosa y la diversión. Nos especializamos en ofrecerte una experiencia gastronómica única con nuestras hamburguesas jugosas, hot dogs irresistibles y esquites con el toque perfecto. Nuestro compromiso es brindarte calidad, sabor y un ambiente acogedor para que disfrutes de cada bocado. ¡Ven y descubre por qué somos los primos de la buena comida!
         </p>
       </div>
