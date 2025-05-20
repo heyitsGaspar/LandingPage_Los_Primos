@@ -92,9 +92,12 @@ export default function Home () {
             className='text-base sm:text-lg pt-4 font-poppins text-white max-w-xl'
           />
 
+          <a href="/assets/menu.pdf" download="menu.pdf">
           <button className='bg-white text-black font-poppins font-bold px-6 py-2 rounded-md mt-6 hover:bg-gray-200 transition duration-300'>
             Ver Menú
           </button>
+          </a>
+          
         </div>
 
         <div className='relative z-10 py-10 mb-15  w-full md:w-1/2 flex justify-center'>
