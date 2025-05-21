@@ -6,6 +6,7 @@ import { InfiniteMovingCardsFoods } from '@/components/landing/infiniteCards'
 import { CardStackFoods } from '@/components/landing/cardStack'
 import { AboutUs } from '@/components/landing/aboutUs'
 import { ColourfulTextDemo } from '@/components/landing/colourfulTittle'
+import Navbar from '@/components/landing/navbar'
 
 const text = 'Bienvenidos a Los Primos'
 const text2 = 'Hamburguesas, hot dogs, esquites, y más...'
@@ -18,103 +19,128 @@ const text4 =
 export default function Home () {
   return (
     <div className='bg-black w-full '>
-      <div className=' relative w-full min-h-screen flex items-center justify-center'>
-        <Image
-          src='/assets/img2.webp'
-          alt='TheCousins'
-          layout='fill'
-          objectFit='cover'
-          className='opacity-50 blur-xs  z-0'
-        />
+      <Navbar/>
+      {/* <nav className='fixed top-0 w-full bg-transparent text-white z-30'>
+        <ul className='flex justify-center gap-4 p-4'>
+          <li>
+            <a href='#home' className='hover: text-tittle'>
+              Home
+            </a>
+          </li>
+          <li>
+            <a href='#menu' className='hover: text-tittle'>
+              Menú
+            </a>
+          </li>
+          <li>
+            <a href='#sobrenosotros' className='hover: text-tittle'>
+              Sobre nosotros
+            </a>
+          </li>
+        </ul>
+      </nav> */}
 
-        <div className='absolute text-center px-4 z-10'>
-          <TextGenerateEffect
-            words={text}
-            className='text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-poppins text-white'
+      <section id='home'>
+        <div className=' relative w-full min-h-screen flex items-center justify-center'>
+          <Image
+            src='/assets/img2.webp'
+            alt='TheCousins'
+            layout='fill'
+            objectFit='cover'
+            className='opacity-50 blur-xs  z-0'
           />
 
-          <TextGenerateEffect
-            words={text2}
-            className='text-xl sm:text-2xl font-poppins text-tittle mt-4'
-          />
+          <div className='absolute text-center px-4 z-10'>
+            <TextGenerateEffect
+              words={text}
+              className='text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-poppins text-white'
+            />
+
+            <TextGenerateEffect
+              words={text2}
+              className='text-xl sm:text-2xl font-poppins text-tittle mt-4'
+            />
+          </div>
         </div>
-      </div>
-      
-      {/* Sección de Titulo */}
+      </section>
 
-      {/* Sección de Título */}
-<motion.div
-  className='relative w-full min-h-[30vh] sm:min-h-[50vh] xs:min-h-[30vh]'
-  initial={{ opacity: 0, y: 50 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.8 }}
-  viewport={{ once: true }}
->
-  <ColourfulTextDemo />
-</motion.div>
+      <section>
+        <motion.div
+          className='relative w-full min-h-[30vh] sm:min-h-[50vh] xs:min-h-[30vh]'
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}  
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <ColourfulTextDemo />
+        </motion.div>
 
-{/* Sección de Tarjetas Infinitas */}
-<motion.div
-  className='relative w-full min-h-[20vh] p-5 flex items-center justify-center'
-  initial={{ opacity: 0, y: 50 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.8, delay: 0.2 }}
-  viewport={{ once: true }}
->
-  <InfiniteMovingCardsFoods />
-</motion.div>
+        {/* Sección de Tarjetas Infinitas */}
+        <motion.div
+          className='relative w-full min-h-[20vh] p-5 flex items-center justify-center'
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          viewport={{ once: true }}
+        >
+          <InfiniteMovingCardsFoods />
+        </motion.div>
+      </section>
 
-      
       {/* Sección de menú y tarjetas */}
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
-        className='relative w-full min-h-screen flex flex-col md:flex-row items-center justify-between gap-8 p-6'
-      >
-        <Image
-          src='/assets/img7.webp'
-          alt='TheCousins'
-          fill
-          priority
-          className='object-cover opacity-70 blur-xs absolute inset-0 z-0'
-        />
-
-        <div className='relative z-10 w-full md:w-1/2 flex  p-2 flex-col items-center md:items-start text-center md:text-left'>
-          <TextGenerateEffect
-            words={text3}
-            className='text-3xl sm:text-4xl font-poppins text-tittle'
+      <section id='menú'>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className='relative w-full min-h-screen flex flex-col md:flex-row items-center justify-between gap-8 p-6'
+        >
+          <Image
+            src='/assets/img7.webp'
+            alt='TheCousins'
+            fill
+            priority
+            className='object-cover opacity-70 blur-xs absolute inset-0 z-0'
           />
 
-          <TextGenerateEffect
-            words={text4}
-            className='text-base sm:text-lg pt-4 font-poppins text-white max-w-xl'
-          />
+          <div className='relative z-10 w-full md:w-1/2 flex  p-2 flex-col items-center md:items-start text-center md:text-left'>
+            <TextGenerateEffect
+              words={text3}
+              className='text-3xl sm:text-4xl font-poppins text-tittle'
+            />
 
-          <a href="/assets/menu.pdf" download="menu.pdf">
-          <button className='bg-white text-black font-poppins font-bold px-6 py-2 rounded-md mt-6 hover:bg-gray-200 transition duration-300'>
-            Ver Menú
-          </button>
-          </a>
-          
-        </div>
+            <TextGenerateEffect
+              words={text4}
+              className='text-base sm:text-lg pt-4 font-poppins text-white max-w-xl'
+            />
 
-        <div className='relative z-10 py-10 mb-15  w-full md:w-1/2 flex justify-center'>
-          <CardStackFoods />
-        </div>
-      </motion.div>
-      <motion.div
-        className=' w-full h-[100vh] '
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.1 }}
-        viewport={{ once: true }}
-      >
-        <div>
-          <AboutUs />
-        </div>
-      </motion.div>
+            <a href='/assets/menu.pdf' download='menu.pdf'>
+              <button className='bg-white text-black font-poppins font-bold px-6 py-2 rounded-md mt-6 hover:bg-gray-200 transition duration-300'>
+                Ver Menú
+              </button>
+            </a>
+          </div>
+
+          <div className='relative z-10 py-10 mb-15  w-full md:w-1/2 flex justify-center'>
+            <CardStackFoods />
+          </div>
+        </motion.div>
+      </section>
+
+      <section id='sobrenosotros'>
+        <motion.div
+          className=' w-full h-[100vh] '
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.1 }}
+          viewport={{ once: true }}
+        >
+          <div>
+            <AboutUs />
+          </div>
+        </motion.div>
+      </section>
     </div>
   )
 }
