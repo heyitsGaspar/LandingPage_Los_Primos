@@ -7,6 +7,7 @@ import { CardStackFoods } from '@/components/landing/cardStack'
 import { AboutUs } from '@/components/landing/aboutUs'
 import { ColourfulTextDemo } from '@/components/landing/colourfulTittle'
 import Navbar from '@/components/landing/navbar'
+import Footer from '@/components/landing/footer'
 
 const text = 'Bienvenidos a Los Primos'
 const text2 = 'Hamburguesas, hot dogs, esquites, y más...'
@@ -20,26 +21,6 @@ export default function Home () {
   return (
     <div className='bg-black w-full '>
       <Navbar/>
-      {/* <nav className='fixed top-0 w-full bg-transparent text-white z-30'>
-        <ul className='flex justify-center gap-4 p-4'>
-          <li>
-            <a href='#home' className='hover: text-tittle'>
-              Home
-            </a>
-          </li>
-          <li>
-            <a href='#menu' className='hover: text-tittle'>
-              Menú
-            </a>
-          </li>
-          <li>
-            <a href='#sobrenosotros' className='hover: text-tittle'>
-              Sobre nosotros
-            </a>
-          </li>
-        </ul>
-      </nav> */}
-
       <section id='home'>
         <div className=' relative w-full min-h-screen flex items-center justify-center'>
           <Image
@@ -141,6 +122,10 @@ export default function Home () {
           </div>
         </motion.div>
       </section>
+      <Footer />
+      
     </div>
+    
+    
   )
 }
