@@ -12,7 +12,7 @@ const Footer = () => {
           {/* Columna 1: Logo y Descripción */}
           <div className='flex flex-col items-center md:items-start text-center md:text-left'>
             <Image
-              src='/assets/logo.webp' // Asegúrate de que esta ruta sea correcta
+              src='/assets/logo.webp' 
               alt='Los Primos Logo'
               width={100}
               height={100}
